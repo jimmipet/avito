@@ -1,0 +1,12 @@
+.some-text{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        color: #aaa;
+}
+
+.text{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+}
