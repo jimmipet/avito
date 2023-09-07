@@ -1,0 +1,13 @@
+.grid-menu{
+    width: 80%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 колонки */
+    grid-gap: 10px; /* Отступ между ячейками */
+    padding: 0 15px 15px 15px;
+}
+
+.grid-item{
+    border: 1px solid white ;
+    border-radius: 30px;
+}

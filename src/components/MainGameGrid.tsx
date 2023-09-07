@@ -1,14 +1,17 @@
+import '../styles/components/MainGameGrid.scss'
 
+function MainGameGrid(){
+    return(
+        <div className="grid-menu">
+              <div className="grid-item"></div>
+                <div className="grid-item"></div>
+                <div className="grid-item"></div>
+                <div className="grid-item"></div>
+                <div className="grid-item"></div>
+                <div className="grid-item"></div>
+        </div>
 
-// const MainGameGrid = () => {
+    );
+}
 
-//     function asdasd(){
-//         console.log("привет")
-
-//     }
-//     return (
-//         <div onClick={asdasd}>Ghbdtn</div>
-//     )
-// }
-
-// export default MainGameGrid;
+export default MainGameGrid;

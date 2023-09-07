@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     background-color: #272b30;
-    width: 25%;
     height: auto;
     max-width: 20%;
     &__block{
@@ -43,10 +42,27 @@
     height: 150px;
 }
 
-.block-list{
-    padding-top: 15px;
+.block-list-inside{
     width: 100%;
+    overflow-y: auto;
     justify-content: flex-start;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #fff;
+    &::-webkit-scrollbar{
+        width: 15px;
+        height: 100px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb:hover{
+        background-color: #aaa;
+    }
+    &::-webkit-scrollbar-track{
+        background-color: #fff;
+        border-radius: 10px;
+    }
 }
 
 .item--checkbox{
@@ -62,15 +78,9 @@
         width: 17px;
         height: 17px;
     }
-    
 }
 
 .input-checkbox{
         width: 17px;
         height: 17px;
-
-}
-
-.text-checkbox{
-
 }
