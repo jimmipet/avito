@@ -1,0 +1,12 @@
+.grid-item{
+    border: 1px solid white ;
+    border-radius: 30px;
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    &__text{
+        color: #aaa;
+    }
+}

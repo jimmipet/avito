@@ -1,4 +1,4 @@
-import "../../styles/components/Filtr.scss"
+import "../../styles/components/Filtr/Filtr.scss"
 interface FiltrBlockTitleProps {
     className: string;
     titleText: string;

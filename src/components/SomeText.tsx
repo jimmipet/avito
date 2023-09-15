@@ -1,4 +1,4 @@
-import "../styles/components/Sometext.scss"
+import "../styles/components/SomeText/Sometext.scss"
 
 function SomeText(){
     return(

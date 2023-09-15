@@ -11,14 +11,12 @@
 //         setGames(json);
 //     }
 //     fetchDate();
-//   },[]); // Пустой массив зависимостей для выполнения один раз при монтировании
+//   },[]); 
 
-//   console.log(games); // Выводим данные в консоль
+//   console.log(games); 
 
 //   return (
-//     <div>
-//       <h1>Fetching Data</h1>
-//     </div>
+//     fkldljlg
 //   );
 // }
 

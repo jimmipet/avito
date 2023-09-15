@@ -1,4 +1,4 @@
-import "../../styles/components/Filtr.scss"
+import "../../styles/components/Filtr/Filtr.scss"
 import FiltrBlockTitle from "./FiltrBlocktitle";
 import FiltrBlockItem from "./FiltrBlockItem"
 import FiltrGenre from "./FiltrGenre"
