@@ -1,19 +1,15 @@
-// import React, { useState, useEffect } from 'react';
-// import {json}  from 'react-router';
 
-// async function Api() {
-//   const [games, setGames] = useState([]);
-
-//   useEffect(() => {
-//     const fetchDate = async ()=>{
-//         const responce= await fetch('https://www.freetogame.com/api/games');
-//         const json = await responce.json();
-//         setGames(json);
-//     }
-//     fetchDate();
-//   },[]); 
-
-//   console.log(games); 
-// }
-
-// export default Api;
+export async function fetchData(url: string) {
+    try {
+      const response = await fetch(url);
+  
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+  
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      throw new Error(`Error fetching data: ${error.message}`);
+    }
+  }
