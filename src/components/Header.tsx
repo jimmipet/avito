@@ -7,7 +7,7 @@ export default class Header extends Component {
     return (
 <Navbar collapseOnSelect expand="md" bg="dark"  variant='dark'>
       <Container fluid>
-        <Navbar.Brand href="#">
+        <Navbar.Brand >
         <img
         src="https://www.freetogame.com/assets/images/freetogame-logo.png"
         />
@@ -19,7 +19,7 @@ export default class Header extends Component {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Главная</Nav.Link>  
+            <Nav.Link >Главная</Nav.Link>  
           </Nav>
           <Form className="d-flex">
             <Form.Control
