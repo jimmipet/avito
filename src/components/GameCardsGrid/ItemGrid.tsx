@@ -8,9 +8,9 @@ interface GameData {
 
 function ItemGrid({ gameData }: { gameData: GameData }) {
   return (
-
+<Link to={`/game-page/${gameData.id}`}style={{ textDecoration: 'none' }}>
     <div id={gameData.id} className="grid-item">
-      <Link to='/game-page'style={{ textDecoration: 'none' }}>
+      
       <div className="grid-item__content">
         <div className="grid-item__image">
           <img src={gameData.thumbnail} alt="GameImage" />
@@ -20,9 +20,9 @@ function ItemGrid({ gameData }: { gameData: GameData }) {
           <span className="grid-item__span">Free</span>
         </div>
       </div>
-     </Link>
+   
     </div>
-     
+  </Link>     
   );
 }
 

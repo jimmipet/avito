@@ -15,7 +15,7 @@ function App() {
       <Header/>
       <Routes>
         <Route path='' element={<HomePage/>}/>
-        <Route path='/game-page' element={<GamePage/>}/>
+        <Route path='/game-page/:id' element={<GamePage/>}/>
         <Route path='*' element={<NotFound/>}/>
       </Routes>
       
