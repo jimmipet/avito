@@ -1,15 +1,18 @@
 
 .grid-menu{
     a{
-        text-decoration: none; /* Убирает подчеркивание ссылок */
-        color: inherit; /* Наследует цвет текста от родительского элемента */
-        cursor: pointer; /* Меняет курсор на указатель при наведении */
+        max-width:300px ;
+        text-decoration: none; 
+        color: inherit; 
+        cursor: pointer; 
     }
+    
     width: 80%;
     height: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 2 колонки */
-    grid-gap: 10px; /* Отступ между ячейками */
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 10px; 
     padding: 0 15px 15px 15px;
+    
 }
 

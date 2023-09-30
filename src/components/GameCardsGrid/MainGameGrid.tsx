@@ -1,23 +1,24 @@
-import React, { useEffect, useState } from 'react';
-import { fetchData } from '../../api/Api';
-import '../../styles/components/GameCardsGrid/MainGameGrid.scss';
-import ItemGrid from './ItemGrid';
-import Pagination from './Pagination'; // Импортируйте компонент Pagination
+import { useLayoutEffect, useState } from "react";
+import { fetchData } from "../../api/Api";
+import "../../styles/components/GameCardsGrid/MainGameGrid.scss";
+import ItemGrid from "./ItemGrid";
+import Pagination from "./Pagination";
+import { GameData } from "../../typing";
 
 function MainGameGrid() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<GameData>([]);
   const [currentPage, setCurrentPage] = useState(1);
 
-  useEffect(() => {
-    const apiUrl = 'https://www.freetogame.com/api/games';
+  useLayoutEffect(() => {
+    const apiUrl = "https://www.freetogame.com/api/games";
 
     fetchData(apiUrl)
       .then((responseData) => {
-        console.log('Data received:', responseData);
+        console.log("Data received:", responseData);
         setData(responseData);
       })
       .catch((error) => {
-        console.error('Error:', error);
+        console.error("Error:", error);
       });
   }, []);
 
@@ -34,9 +35,9 @@ function MainGameGrid() {
   return (
     <div className="grid-menu">
       {data.length > 0 ? (
-        data.slice(startIndex, endIndex).map((game, index) => (
-          <ItemGrid key={index} gameData={game} />
-        ))
+        data
+          .slice(startIndex, endIndex)
+          .map((game, index) => <ItemGrid key={index} gameData={game} />)
       ) : (
         <p>Loading...</p>
       )}

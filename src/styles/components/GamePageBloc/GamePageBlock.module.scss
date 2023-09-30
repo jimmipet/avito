@@ -1,10 +1,15 @@
+h2{
+    color: #aaa;
+}
+
 .wrapper{
+    min-height: 100svh;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-color: #272b30;
 }
 .wrapper_body{
@@ -12,7 +17,7 @@
     justify-content: space-between;
     padding-top: 15px;
     width: 80%;
-    height: 100%;
+    height: auto;
 }
 
 .hr{
@@ -30,7 +35,6 @@
 .game_carts{
     display: flex;
     flex-direction: column;
-
     width: 40%;
     height: auto;
 }
@@ -70,15 +74,16 @@
 
  }  
 .title{
-        color: #aaa;
+    color: #aaa;
 }
 
 .description{
     color: #aaa;
 }
 .image{
-    width: 100px;
-    height: 100px;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
 }
 
 .additionalI_information{
@@ -98,3 +103,44 @@
         margin: 0;
     }
 }
+
+.min{
+    color: #aaa;
+}
+.grid_item_min{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(3, 1fr); 
+}
+
+.screenshot{
+    display: flex;
+    justify-content: space-between;
+}
+.screen{
+    width: 32%;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalContent {
+    width: 90%;
+    height: 90%;
+    background: #fff; 
+  }
+  
+  .modalImage {
+    width: 100%;
+    height: 100%;
+  }
+  
