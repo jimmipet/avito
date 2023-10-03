@@ -1,16 +1,7 @@
 import  styles from "../../styles/components/GamePageBloc/GamePageBlock.module.scss"
+import {GameData} from "../../typing"
 
-interface GameInfo{
-    title: string;
-    developer: string;
-    publisher: string;
-    release_date: string;
-    genre: string;
-    platform: string;
-    
-}
-
-function GameInfo({ gameData }: { gameData: GameInfo }) {
+function GameInfo({ gameData }: { gameData: GameData }) {
   const infoItems = [
     { label: 'Title', value: gameData.title },
     { label: 'Developer', value: gameData.developer },

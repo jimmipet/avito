@@ -1,11 +1,7 @@
 import  styles from "../../styles/components/GamePageBloc/GamePageBlock.module.scss"
-
-interface GameImg {
-    thumbnail: string;
-    name: string;
-  }
+import {GameCards} from "../../typing"
   
-function GamePreview({ gameData }:{ gameData: GameImg }){
+function GamePreview({ gameData }:{ gameData: GameCards }){
     return(
     <div className={styles.game_carts}>
       <img className={styles.img} src={gameData.thumbnail} alt={gameData.name} />

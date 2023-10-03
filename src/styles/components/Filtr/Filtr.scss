@@ -15,12 +15,19 @@
         margin-bottom: 15px;
     }
     &__block-title{
+        margin-bottom: 5px;
         padding-top: 10px;
         display: inline-block;
         position: relative;
     }
     &__title{
         color:#aaa;
+        @media(max-width:1023px){
+            font-size: 20px;
+        }
+        @media(max-width:767px){
+            font-size: 17px;
+        }
     }
     &__hr{
         color: white;
@@ -39,7 +46,7 @@
 
 }
 .platform{
-    height: 150px;
+    height: 140px;
 }
 
 .block-list-inside{
@@ -73,10 +80,31 @@
         font-size: 20px;
         color:#aaa;
         margin-bottom: 0;
+        @media(max-width:1023px){
+            font-size: 15px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        @media(max-width:767px){
+            font-size: 13px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden
+            
+        }
     }
     input{
         width: 17px;
         height: 17px;
+        @media(max-width:1023px){
+            width: 13px;
+            height: 13px;
+        }
+        @media(max-width:767px){
+            width: 11px;
+            height: 11px;
+        }
     }
 }
 

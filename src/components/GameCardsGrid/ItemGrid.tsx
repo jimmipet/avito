@@ -1,12 +1,8 @@
 import "../../styles/components/GameCardsGrid/ItemGrid.scss";
 import {Link} from 'react-router-dom'
-interface GameData {
-  id: string;
-  thumbnail: string;
-  title: string;
-}
+import { GameCards } from "../../typing"
 
-function ItemGrid({ gameData }: { gameData: GameData }) {
+function ItemGrid({ gameData }: { gameData: GameCards }) {
   return (
 <Link to={`/game-page/${gameData.id}`}style={{ textDecoration: 'none' }}>
     <div id={gameData.id} className="grid-item">

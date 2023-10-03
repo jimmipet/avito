@@ -1,10 +1,6 @@
 import  styles from "../../styles/components/GamePageBloc/GamePageBlock.module.scss"
- interface GameDescription{
-    description: string;
-    title: string;
-
- }
-function GameDescription({ gameData }:{gameData:GameDescription}){
+import {GameData} from "../../typing"
+function GameDescription({ gameData }:{gameData:GameData}){
     return(
         <div className={styles.description}>
             <div className={styles.title_hr}>

@@ -1,6 +1,4 @@
 import  styles from "../../styles/components/GamePageBloc/GamePageBlock.module.scss"
-
-
 import { useState } from 'react';
 
 function GameScreenshots({ gameData }: { gameData: GameImg }) {

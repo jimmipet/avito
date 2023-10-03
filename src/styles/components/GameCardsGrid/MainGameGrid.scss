@@ -1,7 +1,7 @@
 
 .grid-menu{
     a{
-        max-width:300px ;
+        width: 100%;
         text-decoration: none; 
         color: inherit; 
         cursor: pointer; 
@@ -10,9 +10,28 @@
     width: 80%;
     height: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); 
     grid-gap: 10px; 
     padding: 0 15px 15px 15px;
+    @media(max-width:767px){
+        width: 80%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px,1fr)); 
+    }
+    @media(max-width:424px){
+        width: 80%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); 
+    }
+    @media(max-width:319px){
+        width: 80%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); 
+    }
+    
     
 }
 
