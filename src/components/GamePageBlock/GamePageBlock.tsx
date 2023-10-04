@@ -13,20 +13,20 @@ function GamePageBlock() {
   const [gameData, setGameData] = useState(null);
 
   useLayoutEffect(() => {
-    async function fetchDataFromApi(setGameData:(data:any)=>void) {
+    async function fetchDataFromApi(setGameData: (data: any) => void) {
       try {
         const data = await fetchData(
           `https://www.freetogame.com/api/game?id=${id}`
         );
         setGameData(data);
-        console.log(data)
+        console.log(data);
       } catch (error) {
         console.error("Ошибка при получении данных:", error);
       }
     }
 
     fetchDataFromApi(setGameData);
-  },[]);
+  }, []);
   return (
     <div className={styles.wrapper}>
       <div className={styles.wrapper_body}>
@@ -34,16 +34,13 @@ function GamePageBlock() {
         <div className={styles.game_about}>
           {gameData && (
             <>
-              <h1 className={styles.title}>{gameData.title}</h1>
               <GameDescription gameData={gameData} />
-              <GameInfo  gameData={gameData} />
-              {
-                gameData.minimum_system_requirements && <GameMinRequirements
-                systemRequirements={
-                  gameData.minimum_system_requirements
-                }
-              />
-              }
+              <GameInfo gameData={gameData} />
+              {gameData.minimum_system_requirements && (
+                <GameMinRequirements
+                  systemRequirements={gameData.minimum_system_requirements}
+                />
+              )}
               <GameScreenshots gameData={gameData} />
             </>
           )}

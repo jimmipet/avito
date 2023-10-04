@@ -14,7 +14,7 @@ function App() {
     <div className='main-container'>
       <Header/>
       <Routes>
-        <Route path='' element={<HomePage/>}/>
+        <Route path='/' element={<HomePage/>}/>
         <Route path='/game-page/:id' element={<GamePage/>}/>
         <Route path='*' element={<NotFound/>}/>
       </Routes>

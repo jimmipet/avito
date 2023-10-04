@@ -1,14 +1,14 @@
-import  styles from "../../styles/components/GamePageBloc/GamePageBlock.module.scss"
-import {GameData} from "../../typing"
+import styles from "../../styles/components/GamePageBloc/GamePageBlock.module.scss";
+import { GameData } from "../../typing";
 
 function GameInfo({ gameData }: { gameData: GameData }) {
   const infoItems = [
-    { label: 'Title', value: gameData.title },
-    { label: 'Developer', value: gameData.developer },
-    { label: 'Publisher', value: gameData.publisher },
-    { label: 'Release Date', value: gameData.release_date },
-    { label: 'Genre', value: gameData.genre },
-    { label: 'Platform', value: gameData.platform },
+    { label: "Title", value: gameData.title },
+    { label: "Developer", value: gameData.developer },
+    { label: "Publisher", value: gameData.publisher },
+    { label: "Release Date", value: gameData.release_date },
+    { label: "Genre", value: gameData.genre },
+    { label: "Platform", value: gameData.platform },
   ];
 
   return (

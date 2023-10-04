@@ -1,10 +1,7 @@
 import NotFoundBlock from "../components/NotFoundBlock/NotFoundBlock";
 
-
-function NotFound(){
-    return(
-        <NotFoundBlock/>
-    );
+function NotFound() {
+  return <NotFoundBlock />;
 }
 
-export default NotFound
+export default NotFound;
