@@ -53,6 +53,8 @@ function FiltrGenre() {
     <div className="genre__block-list block-list">
       {genres.map((genre, index) => (
         <FiltrBlockItem
+          groupName="genre"
+          inputType="checkbox"
           key={index}
           className="genre"
           inputId={genre.toLowerCase()}
