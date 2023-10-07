@@ -1,5 +1,6 @@
 import styles from "../../styles/components/GamePageBloc/GamePageBlock.module.scss";
 import { useState } from "react";
+import { GameImg } from "../../typing";
 
 function GameScreenshots({ gameData }: { gameData: GameImg }) {
   const [modalVisible, setModalVisible] = useState(false);

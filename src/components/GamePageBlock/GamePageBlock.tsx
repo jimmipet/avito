@@ -19,7 +19,6 @@ function GamePageBlock() {
           `https://www.freetogame.com/api/game?id=${id}`
         );
         setGameData(data);
-        console.log(data);
       } catch (error) {
         console.error("Ошибка при получении данных:", error);
       }

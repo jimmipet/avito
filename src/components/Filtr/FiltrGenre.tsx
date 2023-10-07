@@ -54,7 +54,7 @@ function FiltrGenre() {
       {genres.map((genre, index) => (
         <FiltrBlockItem
           groupName="genre"
-          inputType="checkbox"
+          inputType="radio"
           key={index}
           className="genre"
           inputId={genre.toLowerCase()}

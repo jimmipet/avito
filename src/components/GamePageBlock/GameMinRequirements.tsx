@@ -10,6 +10,7 @@ function GameMinRequirements({ systemRequirements }: { systemRequirements: Minim
       { label: 'Storage', value: systemRequirements.storage },
       { label: 'Additional Notes', value: 'Specifications may change during development' },
     ];
+    
   
     return (
       <div className={styles.min}>
