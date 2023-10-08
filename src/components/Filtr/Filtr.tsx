@@ -3,34 +3,46 @@ import FiltrBlockTitle from "./FiltrBlocktitle";
 import FiltrBlockItem from "./FiltrBlockItem";
 import FiltrGenre from "./FiltrGenre";
 import { useSelector } from "react-redux";
-import { store } from "../../redux/store";
 import { selectSelectedPlatform } from "../../redux/slices/platformSlice";
 import { selectSlectedGenre } from "../../redux/slices/genreSlice";
 import { selectSelectedOther } from "../../redux/slices/otherSlice";
 
-function logState() {
-  const currentState = store.getState();
-}
-function Filtr({ setApiUrl }) {
+
+
+function Filtr({ setApiUrl }: { setApiUrl: (url: string) => void }) {
   const selectedPlatform = useSelector(selectSelectedPlatform);
   const selectedGenre = useSelector(selectSlectedGenre);
   const selectedOther = useSelector(selectSelectedOther);
 
   const generateApiUrl = () => {
-    if (selectedPlatform && selectedGenre && selectedOther) {
-      const apiUrl = `https://www.freetogame.com/api/games?platform=${selectedPlatform.toLowerCase()}&category=${selectedGenre}&sort-by=${selectedOther}`;
-      return apiUrl;
-    } else {
-      return "https://www.freetogame.com/api/games";
+    const baseUrl = "https://www.freetogame.com/api/games";
+
+    const queryParams = [];
+
+    if (selectedPlatform) {
+      queryParams.push(`platform=${selectedPlatform.toLowerCase()}`);
     }
+
+    if (selectedGenre) {
+      queryParams.push(`category=${selectedGenre}`);
+      console.log(selectedGenre)
+    }
+
+    if (selectedOther) {
+      queryParams.push(`sort-by=${selectedOther}`);
+    }
+
+    if (queryParams.length > 0) {
+      return `${baseUrl}?${queryParams.join("&")}`;
+    }
+
+    return baseUrl;
   };
 
   const handleApplyButtonClick = () => {
     const newApiUrl = generateApiUrl();
     setApiUrl(newApiUrl);
   };
-
-  useSelector(logState);
 
   return (
     <div className="filtr-menu">

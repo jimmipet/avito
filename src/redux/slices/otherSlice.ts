@@ -9,8 +9,11 @@ const otherSlice = createSlice({
     setOther: (state, action) => {
       state.selectedOther = action.payload;
     },
+    resetOther:(state) => {
+      state.selectedOther= null;
+    },
   },
 });
 export const selectSelectedOther = (state) => state.other.selectedOther;
-export const { setOther } = otherSlice.actions;
+export const { setOther, resetOther} = otherSlice.actions;
 export default otherSlice.reducer;

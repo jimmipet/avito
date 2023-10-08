@@ -9,7 +9,7 @@ interface Url {
 }
 
 function MainGameGrid({ apiUrl }: Url) {
-  const [data, setData] = useState<GameData>([]);
+  const [data, setData] = useState<GameData[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ function MainGameGrid({ apiUrl }: Url) {
       {data.length > 0 ? (
         data
           .slice(startIndex, endIndex)
-          .map((game: string, index: number) => (
+          .map((game: GameData, index: number) => (
             <ItemGrid key={index} gameData={game} />
           ))
       ) : (

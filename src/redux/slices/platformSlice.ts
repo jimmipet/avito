@@ -9,8 +9,11 @@ const platformSlice = createSlice({
     setPlatform: (state, action) => {
       state.selectedPlatform = action.payload;
     },
+    resetPlatform: (state) => {
+      state.selectedPlatform= null;
+    },
   },
 });
 export const selectSelectedPlatform = (state) => state.platform.selectedPlatform;
-export const { setPlatform } = platformSlice.actions;
+export const { setPlatform, resetPlatform } = platformSlice.actions;
 export default platformSlice.reducer;

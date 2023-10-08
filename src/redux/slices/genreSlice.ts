@@ -9,8 +9,11 @@ const genreSlice = createSlice({
     setGenre: (state, action) => {
       state.selectedGenre = action.payload;
     },
+    resetGenre: (state) => {
+      state.selectedGenre = null;
+    },
   },
 });
 export const selectSlectedGenre = (state) => state.genre.selectedGenre;
-export const { setGenre } = genreSlice.actions;
+export const { setGenre,resetGenre } = genreSlice.actions;
 export default genreSlice.reducer;
