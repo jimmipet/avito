@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <div className="main-container">
-        <Header  />
+        <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/game-page/:id" element={<GamePage />} />

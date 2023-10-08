@@ -1,8 +1,8 @@
 import "../../styles/components/Filtr/Filtr.scss";
 import { useDispatch, useSelector } from 'react-redux';
-import { setPlatform} from '../../redux/slices/platformSlice'
-import { setGenre} from '../../redux/slices/genreSlice'
-import { setOther} from '../../redux/slices/otherSlice'
+import { setPlatform} from '../../redux/slices/Filtr/platformSlice'
+import { setGenre} from '../../redux/slices/Filtr/genreSlice'
+import { setOther} from '../../redux/slices/Filtr/otherSlice'
 import { RootState } from "../../redux/store";
 
 interface FiltrBlockItemProps {

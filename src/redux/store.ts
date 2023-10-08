@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
-import platformReducer from './slices/platformSlice';
-import genreReducer from './slices/genreSlice';
-import otherReducer from './slices/otherSlice';
+import platformReducer from './slices/Filtr/platformSlice';
+import genreReducer from './slices/Filtr/genreSlice';
+import otherReducer from './slices/Filtr/otherSlice';
 
 export const store = configureStore({
   reducer: {

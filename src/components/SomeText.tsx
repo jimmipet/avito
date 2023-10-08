@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux";
-import { resetGenre } from "../redux/slices/genreSlice";
+import { resetGenre } from "../redux/slices/Filtr/genreSlice";
 import "../styles/components/SomeText/Sometext.scss";
-import { resetOther } from "../redux/slices/otherSlice";
-import { resetPlatform } from "../redux/slices/platformSlice";
+import { resetOther } from "../redux/slices/Filtr/otherSlice";
+import { resetPlatform } from "../redux/slices/Filtr/platformSlice";
 
 function SomeText() {
   const dispatch = useDispatch();

@@ -3,9 +3,9 @@ import FiltrBlockTitle from "./FiltrBlocktitle";
 import FiltrBlockItem from "./FiltrBlockItem";
 import FiltrGenre from "./FiltrGenre";
 import { useSelector } from "react-redux";
-import { selectSelectedPlatform } from "../../redux/slices/platformSlice";
-import { selectSlectedGenre } from "../../redux/slices/genreSlice";
-import { selectSelectedOther } from "../../redux/slices/otherSlice";
+import { selectSelectedPlatform } from "../../redux/slices/Filtr/platformSlice";
+import { selectSlectedGenre } from "../../redux/slices/Filtr/genreSlice";
+import { selectSelectedOther } from "../../redux/slices/Filtr/otherSlice";
 
 
 

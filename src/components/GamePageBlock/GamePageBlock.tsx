@@ -1,5 +1,5 @@
 import styles from "../../styles/components/GamePageBloc/GamePageBlock.module.scss";
-import { useState, useLayoutEffect } from "react";
+import { useState, useEffect } from "react";
 import { fetchData } from "../../api/Api";
 import { useParams } from "react-router-dom";
 import GamePreview from "./GamePreview";
@@ -12,7 +12,7 @@ function GamePageBlock() {
   const { id } = useParams<{ id: string }>();
   const [gameData, setGameData] = useState(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     async function fetchDataFromApi(setGameData: (data: any) => void) {
       try {
         const data = await fetchData(
