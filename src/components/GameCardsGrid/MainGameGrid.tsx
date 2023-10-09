@@ -4,13 +4,15 @@ import "../../styles/components/GameCardsGrid/MainGameGrid.scss";
 import ItemGrid from "./ItemGrid";
 import Pagination from "./Pagination";
 import { GameData } from "../../typing";
+import { useSelector } from "react-redux";
+import { selectCurrentPage } from '../../redux/slices/Filtr/pageSlice';
 interface Url {
   apiUrl: string;
 }
 
-function MainGameGrid({ apiUrl }: Url) {
+function MainGameGrid({ apiUrl}: Url) {
+  const currentPage = useSelector(selectCurrentPage);
   const [data, setData] = useState<GameData[]>([]);
-  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     fetchData(apiUrl)
@@ -26,7 +28,7 @@ function MainGameGrid({ apiUrl }: Url) {
   const totalPages = Math.ceil(data.length / itemsPerPage);
 
   const handlePageChange = (newPage: number) => {
-    setCurrentPage(newPage);
+    currentPage(newPage);
   };
 
   const startIndex = (currentPage - 1) * itemsPerPage;

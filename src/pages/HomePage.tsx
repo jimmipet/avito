@@ -11,46 +11,52 @@ function HomePage() {
   const selectedPlatform = useSelector(selectSelectedPlatform);
   const selectedGenre = useSelector(selectSlectedGenre);
   const selectedOther = useSelector(selectSelectedOther);
-  
 
-  const [apiUrl, setApiUrl] = useState<string>("https://www.freetogame.com/api/games");
+  const [apiUrl, setApiUrl] = useState<string>(
+    "https://www.freetogame.com/api/games"
+  );
+  const generateApiUrl = () => {
+    const baseUrl = "https://www.freetogame.com/api/games";
+
+    const queryParams = [];
+
+    if (selectedPlatform) {
+      queryParams.push(`platform=${selectedPlatform.toLowerCase()}`);
+    }
+
+    if (selectedGenre) {
+      queryParams.push(`category=${selectedGenre}`);
+    }
+
+    if (selectedOther) {
+      queryParams.push(`sort-by=${selectedOther}`);
+    }
+
+    if (queryParams.length > 0) {
+      return `${baseUrl}?${queryParams.join("&")}`;
+    }
+
+    return baseUrl;
+  };
+  const handleApplyButtonClick = () => {
+    const newApiUrl = generateApiUrl();
+    setApiUrl(newApiUrl);
+    console.log(newApiUrl);
+  };
+
   useEffect(() => {
-    const generateApiUrl = () => {
-      const baseUrl = "https://www.freetogame.com/api/games";
-  
-      const queryParams = [];
-  
-      if (selectedPlatform) {
-        queryParams.push(`platform=${selectedPlatform.toLowerCase()}`);
-      }
-  
-      if (selectedGenre) {
-        queryParams.push(`category=${selectedGenre}`);
-        console.log(selectedGenre)
-      }
-  
-      if (selectedOther) {
-        queryParams.push(`sort-by=${selectedOther}`);
-      }
-  
-      if (queryParams.length > 0) {
-        return `${baseUrl}?${queryParams.join("&")}`;
-      }
-  
-      return baseUrl;
-    };
-    setApiUrl(generateApiUrl())
+    const newApiUrl = generateApiUrl();
+    setApiUrl(newApiUrl);
+    console.log(newApiUrl);
+  }, [handleApplyButtonClick]);
 
-
-  }, [])
-  
   return (
     <>
       <div className="wrapper">
         <div className="wrapper__body">
-          <SomeText />
+          <SomeText handleApplyButtonClick={handleApplyButtonClick} />
           <div className="wrapper__content">
-            <Filtr setApiUrl={setApiUrl} />
+            <Filtr />
             <MainGameGrid apiUrl={apiUrl} />
           </div>
         </div>

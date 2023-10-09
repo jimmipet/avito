@@ -4,12 +4,17 @@ import "../styles/components/SomeText/Sometext.scss";
 import { resetOther } from "../redux/slices/Filtr/otherSlice";
 import { resetPlatform } from "../redux/slices/Filtr/platformSlice";
 
-function SomeText() {
+function SomeText({
+  handleApplyButtonClick,
+}: {
+  handleApplyButtonClick: () => void;
+}) {
   const dispatch = useDispatch();
-  const handlyClick = () => {
+  const handleClearFiltersClick =() => {
     dispatch(resetGenre());
     dispatch(resetOther());
     dispatch(resetPlatform());
+    handleApplyButtonClick();
   };
 
   return (
@@ -19,7 +24,7 @@ function SomeText() {
         <p>Find and filter free-to-play games your way!</p>
       </div>
       <div className=" some-text delete-filtr">
-        <p onClick={handlyClick}>Clear filtrs</p>
+        <p onClick={handleClearFiltersClick}>Clear filtrs</p>
       </div>
     </div>
   );

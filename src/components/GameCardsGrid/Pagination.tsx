@@ -1,4 +1,6 @@
+import { useDispatch } from "react-redux";
 import "../../styles/components/GameCardsGrid/Pagination.scss";
+import { setPage } from "../../redux/slices/Filtr/pageSlice";
 
 interface PaginationProps {
   currentPage: number;
@@ -11,14 +13,21 @@ function Pagination({
   totalPages,
   onPageChange,
 }: PaginationProps) {
+  const dispatch = useDispatch();
   const handlePrevPage = () => {
     if (currentPage > 1) {
+      const newPage = currentPage - 1;
+      dispatch(setPage(newPage));
+      console.log(newPage);
       onPageChange(currentPage - 1);
     }
   };
 
   const handleNextPage = () => {
     if (currentPage < totalPages) {
+      const newPage = currentPage + 1;
+      dispatch(setPage(newPage));
+      console.log(newPage);
       onPageChange(currentPage + 1);
     }
   };
