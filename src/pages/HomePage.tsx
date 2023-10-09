@@ -40,14 +40,12 @@ function HomePage() {
   };
   const handleApplyButtonClick = () => {
     const newApiUrl = generateApiUrl();
-    setApiUrl(newApiUrl);
     console.log(newApiUrl);
   };
 
   useEffect(() => {
     const newApiUrl = generateApiUrl();
     setApiUrl(newApiUrl);
-    console.log(newApiUrl);
   }, [handleApplyButtonClick]);
 
   return (

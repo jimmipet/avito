@@ -18,7 +18,6 @@ function Pagination({
     if (currentPage > 1) {
       const newPage = currentPage - 1;
       dispatch(setPage(newPage));
-      console.log(newPage);
       onPageChange(currentPage - 1);
     }
   };
@@ -27,7 +26,6 @@ function Pagination({
     if (currentPage < totalPages) {
       const newPage = currentPage + 1;
       dispatch(setPage(newPage));
-      console.log(newPage);
       onPageChange(currentPage + 1);
     }
   };
