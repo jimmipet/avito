@@ -1,6 +1,12 @@
+import styles from "../../styles/components/GamePageBloc/GamePageBlock.module.scss";
+
 function NotFoundBlock(){
     return(
-        <h1>Ничего не найдено</h1>
+        <div className={styles.notfound}>
+            <h1> Извините, ничего не найдено</h1>  
+            <div className={styles.smile}>😕</div>
+        </div>
+        
     );
 }
 

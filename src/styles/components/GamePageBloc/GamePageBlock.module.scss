@@ -167,14 +167,32 @@ h2{
     align-items: center;
   }
   
-  .modalContent {
+.modalContent {
     width: 90%;
     height: 90%;
     background: #fff; 
   }
   
-  .modalImage {
+.modalImage {
     width: 100%;
     height: 100%;
   }
   
+
+.notfound{
+    width: 100%;
+    height: 100vh;
+    background-color: #272b30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1{
+        font-size: 50px;
+        color: #aaa;
+    }
+}  
+
+.smile{
+        font-size: 100px;
+}
